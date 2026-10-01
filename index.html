@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <!-- 文字コード指定 -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>接待〇✕ゲーム</title>
+  <meta name="description" content="ミニマックス法で考えるAIと対戦できる〇✕ゲーム。絶対に負けない「激ムズモード」と、わざと負けてくれる「接待モード」を切り替えて遊べます。">
+  <meta property="og:title" content="接待〇✕ゲーム">
+  <meta property="og:description" content="AIと対戦できる〇✕ゲーム。激ムズモードと接待モードを切り替えて遊べます。">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭕</text></svg>">
+  <!-- Google fontsの読み込み -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+  <!-- JavaScriptの読み込み -->
+  <script src="./ai.js" defer></script>
+  <script src="./main.js" defer></script>
+  <!-- CSSの読み込み -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div id="back" class="hard">
+    <h1>接待〇✕ゲーム</h1>
+    <!-- マス目 -->
+    <div id="game">
+      <div id="cell_0_0" class="cell"></div>
+      <div id="cell_0_1" class="cell"></div>
+      <div id="cell_0_2" class="cell"></div>
+      <div id="cell_1_0" class="cell"></div>
+      <div id="cell_1_1" class="cell"></div>
+      <div id="cell_1_2" class="cell"></div>
+      <div id="cell_2_0" class="cell"></div>
+      <div id="cell_2_1" class="cell"></div>
+      <div id="cell_2_2" class="cell"></div>
+    </div>
+    <div id="message"></div>
+    <div class="modes">
+      <label><input type="radio" name="mode" value="hard" checked>激ムズモード</label>
+      <label><input type="radio" name="mode" value="easy">接待モード</label>
+    </div>
+    <p class="hint">あなたは〇（先攻）。決着後にマスをクリックするともう一度遊べます。</p>
+  </div>
+</body>
+
+</html>

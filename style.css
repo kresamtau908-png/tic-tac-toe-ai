@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+#back {
+  min-height: 100vh;
+  min-height: 100dvh;
+  box-sizing: border-box;
+  padding: 16px;
+  display: grid;
+  place-content: center;
+  place-items: center;
+}
+
+#message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: clamp(48px, 14vw, 90px);
+  font-weight: 700;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.hard {
+  background-color: #ffb366;
+  background-image: repeating-linear-gradient(-45deg, #fcc351, #fcc351 8px, transparent 0, transparent 16px);
+}
+
+.easy {
+  background-color: #d1ff66;
+  background-image: repeating-linear-gradient(-45deg, #c9fc51, #c9fc51 8px, transparent 0, transparent 16px);
+
+}
+
+h1 {
+  font-size: clamp(28px, 8vw, 40px);
+  font-weight: 700;
+}
+
+#game {
+  --cell-size: min(150px, calc((100vw - 42px) / 3));
+  display: grid;
+  grid-template-rows: repeat(3, var(--cell-size));
+  grid-template-columns: repeat(3, var(--cell-size));
+  grid-gap: 5px;
+}
+
+.cell {
+  font-size: calc(var(--cell-size) * 0.85);
+  font-weight: 700;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff55;
+  backdrop-filter: blur(3px);
+}
+
+.modes {
+  margin-top: 16px;
+  display: flex;
+  gap: 16px;
+  font-weight: 700;
+}
+
+.modes label {
+  cursor: pointer;
+}
+
+.hint {
+  margin: 12px 0 0;
+  font-size: 14px;
+  text-align: center;
+}
+
+.o {
+  color:#f48fb1;
+}
+
+.x {
+  color:#2196f3;
+}
